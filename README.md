@@ -9,6 +9,6 @@ Człon *naiwny* pochodzi od założenia klasyfikatora, że założenia są nieza
 
 Prawdopodobieństwo całkowite $P(y_k|X)$ jest proporcjonalne do:
 
-$$P(y|X) 	\propto P(X|y) \cdot P(y) = \Pi_{i=1}^n P(x_i|y)$$
+$$P(X|y) \cdot P(y) = \Pi_{i=1}^n P(x_i|y)$$
 
 gdzie $n$ to liczba cech próbki.
