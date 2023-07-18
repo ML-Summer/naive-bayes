@@ -1,6 +1,8 @@
 import pytest
 from analysis.probability_calc import getNormalDistribution
 
+#test values source: https://www.danielsoper.com/statcalc/calculator.aspx?id=54
+
 class TestProbabilityCalculationFunctions:
     def test_get_gaussian(self):
         mu = 0
