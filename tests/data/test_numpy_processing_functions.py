@@ -1,6 +1,6 @@
 import numpy as np
 import pytest
-from src.data.numpy_processing_functions import select_rows, make_labels_dict
+from data.numpy_processing_functions import select_rows, make_labels_dict
 
 
 class TestNumpyProcessingFunctions:
