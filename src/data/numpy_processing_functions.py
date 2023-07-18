@@ -77,23 +77,6 @@ def summarize_dataset(grouped_data, index):
 
 
 
-def select_rows(arr: np.ArrayLike, indices: List[int]) -> np.ArrayLike:
-    """
-    :type indices: list
-    :type arr: np.Array
-    :param arr: np.array([
-    [1, 0, 0, 1],
-    [1, 1, 0, 1],
-    [1, 0, 1, 0],
-    [1, 1, 0, 0]
-    ])
-    :param indices:[0,2]
-    :return:np.array([
-    [1, 0, 0, 1],
-    [1, 0, 1, 0]
-    ])
-    """
-    return arr[indices]
 
 
 def make_labels_dict(labels: List[int | str]) -> dict:
