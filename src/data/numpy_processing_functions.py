@@ -79,14 +79,4 @@ def summarize_dataset(grouped_data, index):
 
 
 
-def make_labels_dict(labels: List[int | str]) -> dict:
-    """
-    :param labels: [0, 1, 1, 0, 1]
-    :return: {0: [0, 3], 1: [1, 2, 4]}
-    """
-    label_dict = {}
-    for index, label in enumerate(labels):
-        if label not in label_dict:
-            label_dict[label] = []
-        label_dict[label].append(index)
-    return label_dict
+

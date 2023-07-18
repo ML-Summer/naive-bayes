@@ -31,11 +31,6 @@ class TestNumpyProcessingFunctions:
 
 
 
-    def test_make_labels_dict(self):
-        labels = [0, 1, 1, 0, 1]
-        expected_result = {0: [0, 3], 1: [1, 2, 4]}
-        actual_result = make_labels_dict(labels)
-        assert expected_result == actual_result
 
 
 pytest.main()
