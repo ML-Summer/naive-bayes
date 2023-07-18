@@ -9,3 +9,8 @@ class TestProbabilityCalculationFunctions:
         sigma = 1
         distribution = getNormalDistribution(mu, sigma)
         assert distribution(1) == 0.24197
+    def test_gaussian_custom_sigma(self):
+        mu = 0
+        sigma = 5
+        distribution = getNormalDistribution(mu, sigma)
+        assert distribution(3) == 0.06664
