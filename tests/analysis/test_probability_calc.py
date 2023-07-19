@@ -9,9 +9,9 @@ class TestProbabilityCalculationFunctions:
         mean = 0
         std = 1
         distribution = getNormalDistribution([mean, std])
-        assert distribution(1) == approx(0.24197)
+        assert distribution(1) == approx(0.24197072)
     def test_gaussian_custom_sigma(self):
         mean = 0
         std = 5
         distribution = getNormalDistribution([mean, std])
-        assert distribution(3) == approx(0.06664)
+        assert distribution(3) == approx(0.06664492)
