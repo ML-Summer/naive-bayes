@@ -1,7 +1,9 @@
 from math import sqrt, exp, pi
 
 
-def getNormalDistribution(mu: float, sigma: float):
+def getNormalDistribution(distribution_parameters: tuple | int):
+    mean = distribution_parameters[0]
+    std = distribution_parameters[1]
     return lambda x: round(
-        1 / (sigma * sqrt(2 * pi)) * exp(-(1 / 2) * ((x - mu) / sigma) ** 2), 5
+        1 / (mean * sqrt(2 * pi)) * exp(-(1 / 2) * ((x - mean) / std) ** 2), 5
     )
