@@ -1,14 +1,16 @@
 # naive-bayes
-Implementacja naiwnego klasyfikatora Bayesa.
+Naive Bayes classificator implementation.
 
-# Teoria
+# Theory
 
-Naiwny klasyfikator Bayesa zajmuje się liczeniem prawdopodobieństw warunkowych $P(y_k|X)$, gdzie $y_k$ to klasa etykiety, a $X$ to wektor cech klasyfikowanej próbki.
-
-Człon *naiwny* pochodzi od założenia klasyfikatora, że założenia są niezależne.
+Naive Bayes is a conditional probability model: it assigns probabilities $P(y_k|X)$ for each of the K possible outcomes or classes with etiquettes $y_k$, given a problem instance to be classified, represented by a vector $X$ encoding some n features (independent variables).
 
 Prawdopodobieństwo całkowite $P(y_k|X)$ jest proporcjonalne do:
 
 $$P(X|y) \cdot P(y) = \Pi_{i=1}^n P(x_i|y)$$
 
-gdzie $n$ to liczba cech próbki.
+where $n$ is a number of sample features.
+
+# Implementation
+
+Here we implement a Gaussian Naive Bayes that assumes a normal distribution of continous values associated with each class. 
