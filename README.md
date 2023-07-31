@@ -24,12 +24,16 @@ The Naive Bayes Classifier employs Bayes’ theorem to estimate membership proba
 
 The Gaussian Naive Bayes Classifier assumes a normal distribution of continuous values associated with each class. The implementation involves computing the mean and standard deviation for each class. Then, it estimates the likelihood for a new given sample based on the Gaussian Probability Distribution Function (Gaussian PDF) calculated as:
 
-f(x) = (1 / (sqrt(2 * PI) * sigma)) * exp(-((x - mean)^2) / (2 * sigma^2))
+f(x) = (1 / (sqrt(2 * $\pi$) * $\sigma$)) * exp(-((x - mean)^2) / (2 * $\sigma$^2))
+
+\[ f(x) = \frac{1}{\sqrt{2 \cdot \pi} \cdot \sigma} \cdot \exp\left(-\frac{(x - \text{mean})^2}{2 \cdot \sigma^2}\right) \]
+
 
 Where:
-- `sigma` is the standard deviation for variable `x`.
-- `mean` is the mean for variable `x`.
-- `PI` is the value of pi (approximately 3.14159).
+- $\sigma$ is the standard deviation for variable $x$
+- `mean` is the mean for variable $x$.
+- $\pi$ is the value of pi (approximately 3.14159).
+
 
 Next the total number of training records is calculated from the counts stored in the summary statistics. This is used in the calculation of the probability of a given class or P(class) as the ratio of rows with a given class of all rows in the training data.
 
