@@ -8,3 +8,4 @@ addopts = [
 [project]
 name = "naive-bayes"
 version = "0.1.0"
+dependencies = ['pandas']
