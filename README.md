@@ -5,7 +5,7 @@ Naive Bayes classificator implementation.
 
 Bayes' Theorem is a fundamental rule in probability theory that allows us to update the probability of an event based on new evidence. It is expressed as:
 
-P(A|B) = (P(B|A) * P(A)) / P(B)
+$\[ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} \]$
 
 Where:
 - P(A|B) is the conditional probability of event A occurring given that event B has occurred.
@@ -24,9 +24,7 @@ The Naive Bayes Classifier employs Bayes’ theorem to estimate membership proba
 
 The Gaussian Naive Bayes Classifier assumes a normal distribution of continuous values associated with each class. The implementation involves computing the mean and standard deviation for each class. Then, it estimates the likelihood for a new given sample based on the Gaussian Probability Distribution Function (Gaussian PDF) calculated as:
 
-f(x) = (1 / (sqrt(2 * $\pi$) * $\sigma$)) * exp(-((x - mean)^2) / (2 * $\sigma$^2))
-
-\[ f(x) = \frac{1}{\sqrt{2 \cdot \pi} \cdot \sigma} \cdot \exp\left(-\frac{(x - \text{mean})^2}{2 \cdot \sigma^2}\right) \]
+$\[ f(x) = \frac{1}{\sqrt{2 \cdot \pi} \cdot \sigma} \cdot \exp\left(-\frac{(x - \text{mean})^2}{2 \cdot \sigma^2}\right) \]$
 
 
 Where:
@@ -39,11 +37,13 @@ Next the total number of training records is calculated from the counts stored i
 
 The likelihood that a new sample belongs to a given class is calculated as:
 
-P(class|data) = P(X|class) * P(class)
+
+$\[ P(\text{class|data}) = P(X|\text{class}) \cdot P(\text{class}) \]$
 
 For instance, if we have 2 input variables (features X1 and X2), the probability of a new sample belonging to the first class (class 0) can be calculated as follows:
 
-P(class=0|X1,X2) = P(X1|class=0) * P(X2|class=0) * P(class=0)
+
+$\[ P(\text{class=0|}X1,X2) = P(X1|\text{class=0}) \cdot P(X2|\text{class=0}) \cdot P(\text{class=0}) \]$
 
 This is repeated for each class and a dictionary of probabilities is returned with one entry for each class.
 
