@@ -1,6 +1,7 @@
 import pytest
 from pytest import approx
-from analysis.probability_calc import getNormalDistribution
+from analysis.probability_calc import getNormalDistribution, getPrior
+from data.numpy_processing_functions import convert_file_to_pd_df
 
 #test values source: https://www.danielsoper.com/statcalc/calculator.aspx?id=54
 
@@ -15,3 +16,10 @@ class TestProbabilityCalculationFunctions:
         std = 5
         distribution = getNormalDistribution([mean, std])
         assert distribution(3) == approx(0.06664492)
+    def test_prior_calc(self):
+        train = convert_file_to_pd_df('src/data/Sample_Data.csv')
+        expected_data = {
+            0: 0.5556,
+            1: 0.4444
+        }
+        assert getPrior(train) == expected_data
