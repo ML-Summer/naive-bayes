@@ -3,6 +3,7 @@ from data.numpy_processing_functions import *
 import pandas
 from pandas import DataFrame
 from typing import Tuple
+from math import log
 
 def bayesClassifier(train: DataFrame, sample: List[float]) -> Tuple[any, dict]:
     """
@@ -40,9 +41,11 @@ def bayesClassifier(train: DataFrame, sample: List[float]) -> Tuple[any, dict]:
         label_pdfs = []
         for distribution_param in distributions[label]:
             label_pdfs.append(getNormalDistribution(distribution_param))
-        label_likelihood = prior[label]
+        label_likelihood = log(prior[label])
         for feature, pdf in enumerate(label_pdfs):
-            label_likelihood = label_likelihood * pdf(sample[feature])
+            label_likelihood = label_likelihood + log(pdf(sample[feature]))
         likelihoods[label] = label_likelihood
     classification = max(likelihoods)
     return (classification, likelihoods)
+
+
