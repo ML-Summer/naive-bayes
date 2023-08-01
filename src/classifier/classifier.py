@@ -45,6 +45,9 @@ def bayesClassifier(train: DataFrame, sample: List[float]) -> Tuple[any, dict]:
         for feature, pdf in enumerate(label_pdfs):
             label_likelihood = label_likelihood + log(pdf(sample[feature]))
         likelihoods[label] = label_likelihood
+    likelihood_sum = sum(likelihoods.values())
+    for label, likelihood in likelihoods.items():
+        likelihoods[label] = likelihood/likelihood_sum
     classification = max(likelihoods)
     return (classification, likelihoods)
 
