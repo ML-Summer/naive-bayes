@@ -18,7 +18,7 @@ Bayes' Theorem is widely used in various fields, including machine learning, sta
 # Theory
 Naive Bayes classification is a powerful application of Bayes' Theorem used for classification tasks in machine learning. The algorithm is based on the assumption that the features are independent (unrelated to each other), which gives the technique its name "naive". 
 
-The Naive Bayes Classifier employs Bayes’ theorem to estimate membership probabilities for each class, indicating the likelihood that a given record or data point belongs to a specific class. The class with the highest probability is then identified as the most probable class.
+The Naive Bayes Classifier employs Bayes’ theorem to estimate membership probabilities for each class, indicating the likelihood that a given record or data point belongs to a specific class. The class with the highest likelihood is then identified as the most probable class.
 
 # Implementation - Gaussian Naive Bayes Classifier
 
@@ -40,11 +40,11 @@ The likelihood that a new sample belongs to a given class is calculated as:
 
 $\[ P(\text{class|data}) = P(X|\text{class}) \cdot P(\text{class}) \]$
 
-For instance, if we have 2 input variables (features X1 and X2), the probability of a new sample belonging to the first class (class 0) can be calculated as follows:
+For instance, if we have 2 input variables (features X1 and X2), the likelihood of a new sample belonging to the first class (class 0) can be calculated as follows:
 
 
 $\[ P(\text{class=0|}X1,X2) = P(X1|\text{class=0}) \cdot P(X2|\text{class=0}) \cdot P(\text{class=0}) \]$
 
-This is repeated for each class and a dictionary of probabilities is returned with one entry for each class.
+This is repeated for each class and a dictionary of likelihoods is returned with one entry for each class.
 
 
