@@ -21,11 +21,13 @@ def bayesClassifier(train: DataFrame, sample: List[float]) -> Tuple[any, dict]:
         raise ValueError(
             "Train dataset row(without label) and classfied sample vary in lengths"
             )
+    #gather data
     grouped_train = group_data_by_target(train)
     prior = getPrior(train)
     likelihoods = {}
     distributions = {}
     labels = grouped_train.keys()
+    #get distributions
     for label in labels:
         mean, std = summarize_dataset(grouped_train, label)
         column_labels = mean.keys()
@@ -40,11 +42,14 @@ def bayesClassifier(train: DataFrame, sample: List[float]) -> Tuple[any, dict]:
         for distribution_param in distributions[label]:
             label_pdfs.append(getNormalDistribution(distribution_param))
         label_likelihood = prior[label]
+        #calculate likelihood
         for feature, pdf in enumerate(label_pdfs):
             label_likelihood = label_likelihood * pdf(sample[feature])
         likelihoods[label] = label_likelihood
+        #likelihood normalization
     likelihood_sum = sum(likelihoods.values())
     for label, likelihood in likelihoods.items():
         likelihoods[label] = likelihood/likelihood_sum
+        #final classification
     classification = max(likelihoods)
     return (classification, likelihoods)
