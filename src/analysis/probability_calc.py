@@ -1,7 +1,7 @@
 from math import sqrt, exp, pi
 from pandas import DataFrame
 from typing import List
-from data.numpy_processing_functions import group_data_by_target
+from data.data_processing_functions import group_data_by_target
 
 
 def getNormalDistribution(distribution_parameters: tuple[float] | list[float]):

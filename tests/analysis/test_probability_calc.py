@@ -1,7 +1,7 @@
 import pytest
 from pytest import approx
 from analysis.probability_calc import getNormalDistribution, getPrior
-from data.numpy_processing_functions import convert_file_to_pd_df
+from data.data_processing_functions import convert_file_to_pd_df
 
 #test values source: https://www.danielsoper.com/statcalc/calculator.aspx?id=54
 
