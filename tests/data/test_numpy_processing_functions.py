@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import pytest
 from pytest import approx
-from data.numpy_processing_functions import *
+from data.data_processing_functions import *
 
 
 class TestNumpyProcessingFunctions:
