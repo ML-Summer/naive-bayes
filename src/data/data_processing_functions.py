@@ -3,12 +3,7 @@ from typing import List
 import pandas as pd
 
 
-# def create_sample_data(df):
-#     sample_data = df.head(9)
-#     sample_data.to_csv('Sample_Data.csv', index = False)
 
-# df = convert_file_to_pd_df('Naive-Bayes-Classification-Data.csv')
-# create_sample_data(df)
 def convert_file_to_pd_df(filepath):
     """
     reads the csv file and converts it to Pandas dataframe
@@ -37,12 +32,6 @@ def group_data_by_target(df):
     return result
 
 
-# df = convert_file_to_pd_df('Sample_Data.csv')
-# grouped_data = group_data_by_target(df)
-# print("Group 0")
-# print(grouped_data[0])
-# print("Group 1")
-# print(grouped_data[1])
 
 
 def summarize_dataset(grouped_data, index):
@@ -55,23 +44,7 @@ def summarize_dataset(grouped_data, index):
         std = df.std()
         return mean, std
 
-# df = convert_file_to_pd_df('Sample_Data.csv')
-# grouped_data = group_data_by_target(df)
-#
-# # Specify the target DataFrame index
-# target_index = 1
-#
-# # Calculate statistics for the target DataFrame
-# mean, std = summarize_dataset(grouped_data, target_index)
-#
-# # Print the mean and standard deviation for the target DataFrame
-# print(f"Mean for the target {target_index} DataFrame:")
-# print(mean["glucose"])
-# print(mean["bloodpressure"])
-# print()
-#
-# print(f"Standard deviation for the target {target_index} DataFrame:")
-# print(std)
+
 
 
 
