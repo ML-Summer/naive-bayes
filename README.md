@@ -53,3 +53,18 @@ This is repeated for each class and a dictionary of likelihoods is returned with
 Our implementation uses [Pandas](https://github.com/pandas-dev/pandas)'s Dataframes to store training data. Dataframes are among standard data structures used by data scientists; their most useful feature in this project were in-built functions that proccessed data column-wise(as seen in `summarize_dataset()`). Pandas' ability to read CSV files and convert them into Dataframe was also useful.
 For data grouped by label values we used Python's dictionaries to store all similar data in one data structure, but at the same time be able to easily retrieve data relevant to only certain label.
 We also make use of plain Python lists to pass data for classification and tuple for classifier output.
+
+# Modules
+
+For better workspace organisation, we grouped functions into their submodules.
+## `data`
+
+This submodule handles proccessing data to and inside the `train` Dataframe. It takes care of grouping the data and estimating the mean and standard deviation of feature distributions.
+
+## `analysis`
+
+Responsible for probability calculation. It handles calculation *a priori* probabilities for labels and providing a probability distributions for feature value vectors.
+
+## `classifier`
+
+The Gaussian naive Bayes classifier. It handles sample classification based on provided training data.
