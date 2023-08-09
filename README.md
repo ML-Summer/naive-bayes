@@ -47,6 +47,9 @@ $\[ P(\text{class=0|}X1,X2) = P(X1|\text{class=0}) \cdot P(X2|\text{class=0}) \c
 
 This is repeated for each class and a dictionary of likelihoods is returned with one entry for each class.
 
+# Algorithm flow
+
+![Flowchart](doc/img/classifier-flow.svg)
 
 # Used data structures
 
