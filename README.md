@@ -51,6 +51,7 @@ This is repeated for each class and a dictionary of likelihoods is returned with
 
 ![Flowchart](doc/img/classifier-flow.svg)
 
+
 # Used data structures
 
 Our implementation uses [Pandas](https://github.com/pandas-dev/pandas)'s Dataframes to store training data. Dataframes are among standard data structures used by data scientists; their most useful feature in this project were in-built functions that proccessed data column-wise(as seen in `summarize_dataset()`). Pandas' ability to read CSV files and convert them into Dataframe was also useful.
